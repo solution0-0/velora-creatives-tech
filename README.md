@@ -1,21 +1,28 @@
-# Velora Creatives & Tech
+# Velora Tech — Olukayode Solution
 
-Official agency portfolio site for Velora Creatives & Tech.
+Official portfolio and digital studio site for **Velora Tech**, founded and led by **Olukayode Solution**.
 
-## Positioning
-Creative + technology agency covering brand identity, web design/development, photography/video, and software/digital solutions.
+## Positioning & Services
+Multidisciplinary creative technology portfolio covering:
+- **Brand Identity & Systems**: Guidelines, typography scales, vector systems, and design tokens.
+- **Web Design & Development**: High-performance responsive websites, web applications, and UI/UX.
+- **Photography & Visual Content**: Commercial stills, video art, and asset curation.
+- **Software & Digital Solutions**: Custom software, RESTful APIs, cloud deployment, and secure databases.
 
-## Stack
-Static HTML/CSS/JS — intentionally lightweight and Vercel-ready.
+## Architecture
+- `index.html`: Main portfolio homepage with capability segments, selected visual work, and digital products.
+- `contact.html`: Dedicated contact page featuring direct icon channels (LinkedIn, WhatsApp, Email, GitHub), embedded Google Form, and project briefing intake.
+- `styles.css`: Centralized corporate executive dark theme with responsive grid layout and CSS variables.
 
-## Local preview
-Run any static server from this directory, for example:
+## Local Preview
+Run any static server from this directory:
 
 ```bash
 python3 -m http.server 3000
 ```
 
-Then open http://localhost:3000.
+Then open `http://localhost:3000`.
 
-## Contact form
-The enquiry form uses the visitor's default mail client. Replace the blank `mailto:` target in `index.html` with the agency's real inbox before launch, or connect a server-side form provider.
+## Contact & Form
+- **Google Form Intake**: Embedded directly on `contact.html`.
+- **Direct Channels**: Direct links with SVG icons for LinkedIn, WhatsApp, and Email (`solutionolukayode@gmail.com`).
