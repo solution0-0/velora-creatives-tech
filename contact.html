@@ -10,36 +10,34 @@
   <!-- Preconnect & Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   
-  <!-- Main Stylesheet -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
   <style>
-    /* Tabs for Form Switching */
     .form-tabs {
       display: flex;
       gap: 10px;
       margin-bottom: 24px;
       border-bottom: 1px solid var(--border);
-      padding-bottom: 12px;
+      padding-bottom: 14px;
     }
     .form-tab-btn {
-      padding: 8px 16px;
-      border-radius: var(--radius-sm);
-      font-family: var(--font-mono);
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      font-size: 12px;
+      font-weight: 600;
       color: var(--text-muted);
       border: 1px solid var(--border);
-      background: var(--bg-card);
+      background: rgba(255, 255, 255, 0.03);
       transition: var(--transition);
     }
     .form-tab-btn.active,
     .form-tab-btn:hover {
-      background: var(--accent);
+      background: var(--gradient-primary);
       color: #fff;
-      border-color: var(--accent-light);
+      border-color: transparent;
+      box-shadow: 0 4px 14px var(--gradient-glow);
     }
     .tab-content {
       display: none;
@@ -51,18 +49,21 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      padding: 6px 12px;
-      background: rgba(37, 99, 235, 0.1);
-      border: 1px solid var(--border-accent);
-      border-radius: var(--radius-sm);
+      padding: 6px 14px;
+      background: var(--pill-bg);
+      border: 1px solid var(--pill-border);
+      border-radius: var(--radius-full);
       font-size: 11px;
-      font-family: var(--font-mono);
-      color: var(--accent-light);
+      font-weight: 600;
+      color: var(--primary);
       margin-bottom: 16px;
     }
   </style>
 </head>
 <body>
+
+  <!-- Ambient Light -->
+  <div class="ambient-glow-top" aria-hidden="true"></div>
 
   <!-- Navigation -->
   <header class="nav-wrap">
@@ -79,11 +80,11 @@
       <div class="nav-links" id="navLinks">
         <a href="index.html">Home</a>
         <a href="index.html#services">Services</a>
-        <a href="index.html#work">Selected Work</a>
+        <a href="index.html#work">Projects</a>
         <a href="index.html#products">Products</a>
         <a href="contact.html" class="active">Contact</a>
         <a class="nav-cta" href="index.html">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
           <span>Back to Portfolio</span>
         </a>
       </div>
@@ -95,16 +96,16 @@
   <main>
     <!-- Contact Hero Header -->
     <section class="contact-hero">
-      <div class="eyebrow">
+      <div class="eyebrow-pill">
         <span class="status-dot"></span>
-        <span>Initiate Collaboration • Direct Channels</span>
+        <span>Get In Touch • Direct Channels</span>
       </div>
       <h1>
-        Let’s Build Something <em>Exceptional.</em>
+        Let’s Build Something <span class="gradient-text">Exceptional.</span>
       </h1>
       <p>
         Have an upcoming project, technical inquiry, or brand identity challenge? 
-        Connect directly with <strong>Olukayode Solution</strong> via WhatsApp, Email, LinkedIn, or complete the project briefing form below.
+        Connect directly with <strong>Olukayode Solution</strong> via WhatsApp, Email, LinkedIn, or complete the project brief below.
       </p>
     </section>
 
@@ -117,15 +118,14 @@
           <div class="section-label">Direct Communication</div>
           <h3>Connect Directly</h3>
           <p>
-            Choose your preferred channel for fast response. Typically replying within 2–6 hours on business days.
+            Choose your preferred channel for quick response. Typically replying within 2–6 hours on business days.
           </p>
         </div>
 
         <!-- WhatsApp Channel Card (Icon Driven) -->
-        <!-- Note: Update phone number with your actual digits if you wish: e.g., https://wa.me/234XXXXXXXXXX -->
         <a class="channel-card whatsapp" href="https://wa.me/?text=Hello%20Olukayode,%20I'd%20like%20to%20discuss%20a%20project%20with%20Velora%20Tech" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
           <div class="channel-icon-large">
-            <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
               <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.19 8.19 0 0 1-5.82 2.41h-.01c-1.47 0-2.91-.4-4.17-1.15l-.3-.18-3.11.82.83-3.03-.2-.31a8.19 8.19 0 0 1-1.27-4.39c0-4.54 3.7-8.24 8.24-8.24m4.52 11.64c-.25-.13-1.48-.73-1.71-.81-.23-.09-.4-.13-.57.13-.17.25-.66.81-.81.98-.15.17-.3.19-.55.06-.25-.13-1.07-.39-2.04-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.14.17-.24.25-.4.09-.17.04-.31-.02-.44-.06-.13-.57-1.37-.78-1.87-.2-.49-.41-.42-.57-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.61c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.48-.6 1.69-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.29z"/>
             </svg>
           </div>
@@ -139,13 +139,13 @@
         <!-- Email Channel Card (Icon Driven) -->
         <a class="channel-card" href="mailto:solutionolukayode@gmail.com?subject=Project%20Inquiry%20via%20Velora%20Tech" aria-label="Send Email">
           <div class="channel-icon-large">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
             </svg>
           </div>
           <div class="channel-info">
             <h4>Official Email</h4>
-            <p>For detailed RFPs, requirements, &amp; contract proposals</p>
+            <p>For detailed briefs, RFPs, requirements &amp; contracts</p>
             <span class="channel-action-hint">solutionolukayode@gmail.com ↗</span>
           </div>
         </a>
@@ -153,13 +153,13 @@
         <!-- LinkedIn Channel Card (Icon Driven) -->
         <a class="channel-card linkedin" href="https://www.linkedin.com/in/joseph-olukayode-981398437" target="_blank" rel="noopener noreferrer" aria-label="View LinkedIn Profile">
           <div class="channel-icon-large">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
               <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.68 1.68 0 1 0 0-3.36 1.68 1.68 0 0 0 0 3.36m1.39 9.74v-8.37H5.07v8.37z"/>
             </svg>
           </div>
           <div class="channel-info">
             <h4>LinkedIn Network</h4>
-            <p>Connect with Joseph Olukayode &amp; review credentials</p>
+            <p>Connect with Joseph Olukayode &amp; review recommendations</p>
             <span class="channel-action-hint">View LinkedIn Profile ↗</span>
           </div>
         </a>
@@ -167,7 +167,7 @@
         <!-- GitHub Channel Card (Icon Driven) -->
         <a class="channel-card" href="https://github.com/solution0-0/velora-creatives-tech" target="_blank" rel="noopener noreferrer" aria-label="View GitHub Repositories">
           <div class="channel-icon-large">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
               <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0 0 22 12.017C22 6.484 17.522 2 12 2z"/>
             </svg>
           </div>
@@ -179,7 +179,7 @@
         </a>
       </aside>
 
-      <!-- Right Column: Project Briefing Form (Google Form & Direct Form Option) -->
+      <!-- Right Column: Project Briefing Form -->
       <section class="form-shell">
         <div class="form-shell-head">
           <div class="section-label">Project Intake Form</div>
@@ -200,11 +200,6 @@
             <span>Live Google Form Intake Embed</span>
           </div>
 
-          <!-- 
-            ====================================================================
-            GOOGLE FORM EMBED
-            ====================================================================
-          -->
           <div class="google-form-container">
             <iframe 
               src="https://docs.google.com/forms/d/e/1FAIpQLSfvWJuyEcjE95eQCV5N0lmaL0hWBazSmixBcFQhWLYFkh7MNA/viewform?embedded=true" 
@@ -219,7 +214,7 @@
           </div>
           <div style="text-align: center; margin-top: 14px; font-size: 13px; color: var(--text-muted);">
             Having trouble viewing the embedded form? 
-            <a href="https://forms.gle/Egz8tkVQ38qZR79c8" target="_blank" rel="noopener noreferrer" style="color: var(--accent-light); font-weight: 700; text-decoration: underline;">
+            <a href="https://forms.gle/Egz8tkVQ38qZR79c8" target="_blank" rel="noopener noreferrer" style="color: var(--primary); font-weight: 700; text-decoration: underline;">
               Open Google Form directly ↗
             </a>
           </div>
@@ -270,9 +265,9 @@
 
             <button type="submit" class="form-submit-btn">
               <span>Send Project Brief</span>
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
-            <div id="formSuccessMessage" style="display:none; margin-top: 16px; padding: 12px; background: rgba(16,185,129,0.1); border: 1px solid #10b981; border-radius: 6px; color: #10b981; font-size: 13px; text-align: center;">
+            <div id="formSuccessMessage" style="display:none; margin-top: 16px; padding: 12px; background: rgba(16,185,129,0.1); border: 1px solid #10b981; border-radius: 8px; color: #10b981; font-size: 13px; text-align: center;">
               Thank you! Your project brief has been logged. Olukayode will follow up shortly.
             </div>
           </form>
